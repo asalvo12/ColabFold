@@ -504,7 +504,7 @@ def main():
                     if len(query_seqs_cardinality) > 1:
                         with args.base.joinpath(f"{id}.paired.a3m").open("r") as f:
                             paired_msa.append(f.read())
-                    args.base.joinpath(f"{id}.paired.a3m").unlink()
+                    args.base.joinpath(f"{id}.paired.a3m")#.unlink()
                     id += 1
                 msa = msa_to_str(
                     unpaired_msa, paired_msa, query_sequences, query_seqs_cardinality
